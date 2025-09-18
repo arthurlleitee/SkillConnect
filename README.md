@@ -54,5 +54,3 @@ GitHub: Exibição de projetos reais do portfólio diretamente no perfil.
 LinkedIn: Exportação de competências e badges como certificados.
 
 Sistema de Notificações: Alertas como: "3 pessoas perto de você querem aprender algo que você domina!".
-
-🔧 Tecnologias Suge
