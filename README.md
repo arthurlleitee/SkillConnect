@@ -1,59 +1,75 @@
-🔹 Sobre o Projeto
-O SkillConnect é uma plataforma colaborativa projetada para mapear, visualizar e conectar as competências técnicas e os interesses de aprendizado dos alunos de uma instituição de ensino. A ferramenta visa quebrar as barreiras de comunicação e colaboração, tornando visível o capital intelectual da comunidade acadêmica.
+Sobre o Projeto
 
-O sistema transforma a maneira como os alunos interagem, permitindo que encontrem facilmente colegas para estudar, formar grupos de projeto equilibrados e conectar mentores a aprendizes de forma orgânica e eficiente. Para os professores, oferece uma visão clara sobre as forças e fraquezas da turma, permitindo um planejamento de aula mais direcionado.
+O SkillConnect é uma plataforma colaborativa projetada para mapear, visualizar e conectar as competências técnicas e os interesses de aprendizado dos alunos de uma instituição de ensino. A ferramenta busca reduzir barreiras de comunicação e colaboração, tornando visível o capital intelectual da comunidade acadêmica.
 
-🎯 Conceito Central
-A ideia central é criar um ecossistema onde cada aluno possa cadastrar suas competências técnicas (linguagens de programação, frameworks, bancos de dados, etc.) e suas áreas de interesse (o que desejam aprender). Com base nesses dados, a plataforma gera:
+O sistema transforma a maneira como os alunos interagem, permitindo que encontrem facilmente colegas para estudar, formem grupos de projeto equilibrados e conectem mentores a aprendizes de forma orgânica e eficiente. Para os professores, oferece uma visão clara sobre as forças e fraquezas da turma, permitindo um planejamento de aula mais direcionado.
 
-Mapa Visual da Comunidade: Um heatmap ou um grafo de conexões que mostra as tecnologias mais dominadas e as mais desejadas.
+Conceito Central
+
+A ideia central é criar um ecossistema onde cada aluno possa cadastrar suas competências técnicas (linguagens de programação, frameworks, bancos de dados etc.) e suas áreas de interesse (o que desejam aprender). Com base nesses dados, a plataforma gera:
+
+Mapa Visual da Comunidade: Um heatmap ou grafo de conexões que mostra as tecnologias mais dominadas e as mais desejadas.
 
 Sugestões Inteligentes de Grupos: Algoritmos que formam equipes de estudo ou projeto com habilidades complementares.
 
-Match de Mentorias: Conecta proativamente alunos experientes com aqueles que buscam conhecimento em áreas específicas.
+Match de Mentorias: Conexão direta entre alunos experientes e aqueles que buscam conhecimento em áreas específicas.
 
 O resultado é um ambiente de aprendizado mais colaborativo, motivador e prático.
 
-✨ Funcionalidades Principais
-1. Perfil de Usuário
-Autenticação: Login seguro via e-mail acadêmico ou matrícula.
+Funcionalidades Principais
+Perfil de Usuário
 
-Perfil Detalhado: Seção para o aluno adicionar:
+Autenticação por e-mail acadêmico ou matrícula.
 
-Competências: Com nível de proficiência (ex: Iniciante, Intermediário, Avançado).
+Perfil detalhado com:
 
-Interesses de Aprendizado: O que o aluno deseja estudar.
+Competências com nível de proficiência (Iniciante, Intermediário, Avançado).
 
-Disponibilidade: Horários livres para colaboração.
+Interesses de aprendizado.
 
-2. Mapa de Competências Interativo
-Visualização em Heatmap: Gráfico de calor que exibe a distribuição de conhecimento por tecnologia ou disciplina (ex: 70% da turma domina Git, mas apenas 20% conhece Docker).
+Disponibilidade para colaboração.
 
-Visualização em Grafo: Rede social de competências que conecta mentores e aprendizes.
+Mapa de Competências Interativo
 
-3. Motor de Sugestão de Grupos
-Formação Equilibrada: Algoritmo para criar grupos com uma mistura ideal de habilidades para projetos acadêmicos.
+Visualização em heatmap apresentando a distribuição de conhecimento por tecnologia ou disciplina.
 
-Grupos por Objetivo: Filtro para formar grupos focados em estudar para provas, praticar para entrevistas ou desenvolver projetos.
+Visualização em grafo mostrando conexões entre mentores e aprendizes.
 
-4. Sistema de Mentoria
-Matchmaking: Sistema que sugere mentores com base nos interesses dos aprendizes.
+Motor de Sugestão de Grupos
 
-Sistema de Feedback: Avaliação (1 a 5 estrelas) após cada sessão de mentoria para garantir a qualidade.
+Formação equilibrada para projetos acadêmicos.
 
-5. Gamificação
-Sistema de Pontos: Recompensas por ensinar, aprender e colaborar.
+Grupos por objetivo, como estudo para provas, preparação para entrevistas ou desenvolvimento de projetos.
 
-Conquistas (Badges): Medalhas como "Mentor de Python", "Mestre de Algoritmos" ou "Colaborador Full-Stack".
+Sistema de Mentoria
 
-Ranking: Classificação dos alunos mais colaborativos para incentivar a participação.
+Matchmaking entre mentores e aprendizes com base nos interesses cadastrados.
 
-6. Integrações Futuras
-GitHub: Exibição de projetos reais do portfólio diretamente no perfil.
+Sistema de feedback após sessões de mentoria para garantir a qualidade.
 
-LinkedIn: Exportação de competências e badges como certificados.
+Gamificação
 
-Sistema de Notificações: Alertas como: "3 pessoas perto de você querem aprender algo que você domina!".
+Sistema de pontos por ensinar, aprender e colaborar.
+
+Conquistas por domínio ou contribuição em áreas específicas.
+
+Ranking dos alunos mais colaborativos.
+
+Integrações Futuras
+
+GitHub: Exibição de projetos reais no perfil.
+
+LinkedIn: Exportação de competências e conquistas como certificados.
+
+Sistema de notificações contextualizadas.
+
+Diagrama de Atividades do Sistema
+
+Fluxo de atividades referente ao processo de matchmaking de mentoria na plataforma SkillConnect.
+
+Sobre o Uso de Programação em Par
+
+Durante o desenvolvimento deste projeto, a prática de programação em par não foi adotada como metodologia principal. A decisão se deu pelo fato de que os integrantes do grupo possuíam níveis técnicos distintos, o que poderia gerar desequilíbrio no ritmo de produção e dificultar a fluidez natural do desenvolvimento. Diante dessa diferença, optou-se por uma organização que permitisse a cada membro contribuir de forma mais autônoma, mantendo o progresso consistente do projeto como um todo.
 
 
 
