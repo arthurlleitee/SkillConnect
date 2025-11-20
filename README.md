@@ -1,76 +1,188 @@
 Sobre o Projeto
 
-O SkillConnect é uma plataforma colaborativa projetada para mapear, visualizar e conectar as competências técnicas e os interesses de aprendizado dos alunos de uma instituição de ensino. A ferramenta busca reduzir barreiras de comunicação e colaboração, tornando visível o capital intelectual da comunidade acadêmica.
+O SkillConnect é uma plataforma colaborativa projetada para mapear, visualizar e conectar competências técnicas e interesses de aprendizado dos alunos de uma instituição de ensino. O objetivo é reduzir barreiras de comunicação e criar um ecossistema acadêmico mais colaborativo, onde cada estudante tenha visibilidade sobre o capital intelectual da comunidade.
 
-O sistema transforma a maneira como os alunos interagem, permitindo que encontrem facilmente colegas para estudar, formem grupos de projeto equilibrados e conectem mentores a aprendizes de forma orgânica e eficiente. Para os professores, oferece uma visão clara sobre as forças e fraquezas da turma, permitindo um planejamento de aula mais direcionado.
+O sistema facilita a formação de grupos de estudo, a conexão entre mentores e aprendizes e a identificação de lacunas de conhecimento dentro de uma turma. Professores também podem utilizar essas informações para planejar atividades pedagógicas mais direcionadas.
 
 Conceito Central
 
-A ideia central é criar um ecossistema onde cada aluno possa cadastrar suas competências técnicas (linguagens de programação, frameworks, bancos de dados etc.) e suas áreas de interesse (o que desejam aprender). Com base nesses dados, a plataforma gera:
+A plataforma se baseia na ideia de que os alunos podem declarar:
 
-Mapa Visual da Comunidade: Um heatmap ou grafo de conexões que mostra as tecnologias mais dominadas e as mais desejadas.
+Suas competências técnicas e respectivos níveis de proficiência (iniciante, intermediário, avançado)
 
-Sugestões Inteligentes de Grupos: Algoritmos que formam equipes de estudo ou projeto com habilidades complementares.
+Suas áreas de interesse e aprendizado
 
-Match de Mentorias: Conexão direta entre alunos experientes e aqueles que buscam conhecimento em áreas específicas.
+Sua disponibilidade para atuar como mentor
 
-O resultado é um ambiente de aprendizado mais colaborativo, motivador e prático.
+Com essas informações, o sistema é capaz de gerar:
+
+Mapa visual de competências
+
+Sugestões de grupos equilibrados para projetos
+
+Conexões entre mentores e aprendizes
+
+Relatórios sobre pontos fortes da comunidade acadêmica
 
 Funcionalidades Principais
 Perfil de Usuário
 
-Autenticação por e-mail acadêmico ou matrícula.
+Cadastro de nome, e-mail acadêmico e nível.
 
-Perfil detalhado com:
+Registro de competências e interesses separados por vírgula.
 
-Competências com nível de proficiência (Iniciante, Intermediário, Avançado).
+Indicação opcional de disponibilidade para mentoria.
 
-Interesses de aprendizado.
+Mapa de Competências
 
-Disponibilidade para colaboração.
+Representação da distribuição de habilidades (na versão completa).
 
-Mapa de Competências Interativo
+Identificação de tecnologias mais populares.
 
-Visualização em heatmap apresentando a distribuição de conhecimento por tecnologia ou disciplina.
+Motor de Sugestão de Grupos (versão completa)
 
-Visualização em grafo mostrando conexões entre mentores e aprendizes.
+Formação de grupos balanceados considerando níveis e habilidades.
 
-Motor de Sugestão de Grupos
-
-Formação equilibrada para projetos acadêmicos.
-
-Grupos por objetivo, como estudo para provas, preparação para entrevistas ou desenvolvimento de projetos.
+Indicação de participantes ideais para atividades específicas.
 
 Sistema de Mentoria
 
-Matchmaking entre mentores e aprendizes com base nos interesses cadastrados.
+Combinação entre mentees iniciantes e mentores disponíveis.
 
-Sistema de feedback após sessões de mentoria para garantir a qualidade.
+Lógica baseada na interseção entre interesses e competências.
 
-Gamificação
+Exibição clara das tecnologias que tornam o match relevante.
 
-Sistema de pontos por ensinar, aprender e colaborar.
+Gamificação (versão futura)
 
-Conquistas por domínio ou contribuição em áreas específicas.
+Pontuação por contribuir ensinando ou aprendendo.
 
-Ranking dos alunos mais colaborativos.
+Conquistas temáticas e participação em ranking colaborativo.
 
 Integrações Futuras
 
-GitHub: Exibição de projetos reais no perfil.
+GitHub para exibir projetos reais no perfil.
 
-LinkedIn: Exportação de competências e conquistas como certificados.
+LinkedIn para exportação de competências.
 
-Sistema de notificações contextualizadas.
+Sistema de notificações personalizadas.
 
-Diagrama de Atividades do Sistema
+Versão Utilizada no MVP
 
-Fluxo de atividades referente ao processo de matchmaking de mentoria na plataforma SkillConnect.
+Para esta entrega, foi desenvolvida uma versão mínima funcional da plataforma, implementada inteiramente com:
+
+HTML
+
+CSS
+
+JavaScript
+
+Essa abordagem permitiu uma demonstração clara, rápida e funcional da ideia central, mantendo as principais interações e permitindo visualizar o conceito de forma navegável.
+
+O MVP implementa:
+
+Cadastro de perfis
+
+Armazenamento em memória
+
+Exibição da base de perfis
+
+Dashboard de indicadores
+
+Sistema de mentoria
+
+Exibição de tecnologias em comum entre mentor e mentee
+
+Perfis de exemplo pré-carregados para facilitar a demonstração
+
+Esse MVP é totalmente client-side e pode ser executado simplesmente abrindo o arquivo HTML em qualquer navegador moderno. Dessa forma, atende ao objetivo principal da entrega: demonstrar a aplicação central do SkillConnect.
+
+Como Executar o MVP
+
+Baixe ou copie o arquivo index.html para seu computador.
+
+Abra o arquivo no navegador (Google Chrome, Firefox, Edge ou outro).
+
+Utilize o menu superior para navegar pelas seções:
+
+Início
+
+Novo Perfil
+
+Perfis
+
+Mentoria
+
+Não é necessário instalar bibliotecas, configurar servidor ou utilizar backend.
+
+Seções do MVP
+Início
+
+Apresenta indicadores gerais:
+
+Total de perfis
+
+Total de mentores
+
+Número de iniciantes
+
+Número de avançados
+
+Novo Perfil
+
+Formulário para criar novos registros. Campos:
+
+Nome
+
+E-mail
+
+Nível
+
+Competências
+
+Interesses
+
+Disponibilidade como mentor
+
+Perfis
+
+Listagem completa com:
+
+Competências em forma de badges
+
+Interesses segmentados
+
+Indicação de disponibilidade para mentoria
+
+Mentoria
+
+Apresenta sugestões de:
+
+Mentor
+
+Mentee
+
+Tecnologias em comum
+
+A lógica utiliza interseção entre interesses e competências para gerar recomendações consistentes.
+
+Justificativa Técnica da Solução
+
+Dado o curto prazo e a necessidade de entregar um protótipo funcional demonstrável, optou-se pela implementação de um MVP utilizando HTML, CSS e JavaScript. Isso permite apresentar ao professor:
+
+Fluxos completos de uso
+
+Interface navegável
+
+Lógica funcional de recomendação
+
+Fidelidade conceitual ao projeto original
+
+A arquitetura simplificada garante execução imediata, sem dependências externas, facilitando a apresentação e evitando problemas de infraestrutura ou deploy.
 
 Sobre o Uso de Programação em Par
 
-Durante o desenvolvimento deste projeto, a prática de programação em par não foi adotada como metodologia principal. A decisão se deu pelo fato de que os integrantes do grupo possuíam níveis técnicos distintos, o que poderia gerar desequilíbrio no ritmo de produção e dificultar a fluidez natural do desenvolvimento. Diante dessa diferença, optou-se por uma organização que permitisse a cada membro contribuir de forma mais autônoma, mantendo o progresso consistente do projeto como um todo.
-
+Durante o desenvolvimento do projeto, não foi adotada a prática de programação em par. A decisão ocorreu devido à diferença de níveis técnicos dentro da equipe, o que poderia prejudicar o ritmo de produção e dificultar a contribuição individual de cada membro. A opção escolhida permitiu que todos colaborassem de maneira autônoma e eficiente dentro do prazo disponível.
 
 
 ### Diagrama de Atividades do Sistema
