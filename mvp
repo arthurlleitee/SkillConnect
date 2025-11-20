@@ -2,493 +2,794 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>SkillConnect - MVP</title>
+    <title>SkillConnect MVP</title>
+
     <style>
+        /* ================================
+           CSS GLOBAL - SKILLCONNECT MVP
+        ================================ */
+
+        :root {
+            --bg: #f5f7fa;
+            --white: #ffffff;
+            --dark: #0f172a;
+            --dark2: #1e293b;
+            --border: #e2e8f0;
+            --gray: #64748b;
+            --gray2: #94a3b8;
+            --primary: #0f1e44;
+            --primary-light: #1e3a8a;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --warning: #ca8a04;
+            --blue-badge: #dbeafe;
+            --green-badge: #dcfce7;
+            --yellow-badge: #fef9c3;
+            --transition: 0.2s ease;
+        }
+
         * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: "Inter", "Segoe UI", sans-serif;
         }
+
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            background: var(--bg);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
         }
-        header {
-            background: #1f2933;
-            color: #fff;
-            padding: 10px 20px;
-        }
-        header h1 {
-            margin: 0 0 5px 0;
-        }
-        nav {
-            margin-top: 5px;
-        }
-        nav button {
-            margin-right: 10px;
-            padding: 6px 10px;
-            border: none;
-            background: #3b82f6;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        nav button:hover {
-            background: #2563eb;
-        }
-        main {
+
+        /* ================================
+           SIDEBAR LATERAL
+        ================================ */
+
+        #sidebar {
+            width: 240px;
+            background: var(--white);
+            border-right: 1px solid var(--border);
             padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #fff;
-            min-height: 70vh;
-            box-shadow: 0 0 6px rgba(0,0,0,0.08);
+            overflow-y: auto;
         }
-        footer {
-            padding: 10px 20px;
-            font-size: 12px;
-            background: #e5e5e5;
-            text-align: center;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .card {
-            flex: 1 1 200px;
-            background: #f3f4f6;
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-        }
-        .card h3 {
-            margin: 0 0 8px 0;
-            font-size: 15px;
-        }
-        .card p {
-            margin: 0;
+
+        #sidebar h2 {
+            margin-bottom: 25px;
+            color: var(--primary);
             font-size: 20px;
-            font-weight: bold;
         }
-        table {
+
+        .sidebar-btn {
+            display: block;
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        table th, table td {
-            border: 1px solid #e5e5e5;
-            padding: 6px 8px;
-            text-align: left;
-            vertical-align: top;
-        }
-        table th {
-            background: #f3f4f6;
-        }
-        .form {
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .form label {
-            font-size: 14px;
-            font-weight: bold;
-        }
-        .form input, .form select, .form textarea {
-            padding: 6px;
-            font-size: 14px;
-        }
-        .form button {
-            margin-top: 10px;
-            padding: 8px 12px;
-            font-size: 14px;
+            padding: 12px;
+            background: transparent;
             border: none;
-            background: #10b981;
-            color: #fff;
+            text-align: left;
+            font-size: 15px;
+            color: var(--dark2);
+            border-radius: 6px;
+            margin-bottom: 8px;
             cursor: pointer;
-            border-radius: 4px;
+            transition: var(--transition);
         }
-        .form button:hover {
-            background: #059669;
+
+        .sidebar-btn:hover {
+            background: var(--primary-light);
+            color: var(--white);
         }
-        .checkbox-row {
-            display: flex;
-            align-items: center;
-            gap: 6px;
+
+        /* ================================
+           ÁREA PRINCIPAL
+        ================================ */
+
+        #content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
         }
-        .checkbox-row input {
-            width: auto;
-        }
+
         .section {
             display: none;
         }
-        .section.active {
+
+        .active {
             display: block;
         }
-        .mentoria-list {
-            list-style: none;
-            padding-left: 0;
+        /* ================================
+           CARDS
+        ================================ */
+
+        .card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+            border: 1px solid var(--border);
         }
-        .mentoria-list li {
-            margin-bottom: 12px;
-            padding: 8px;
-            background: #f9fafb;
-            border-radius: 4px;
-            border-left: 4px solid #3b82f6;
+
+        .card h3 {
+            color: var(--dark2);
+            font-size: 17px;
+            margin-bottom: 10px;
         }
+
+        .card p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .big-number {
+            font-size: 32px;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        /* ================================
+           FORMULÁRIOS
+        ================================ */
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            color: var(--dark2);
+            font-size: 14px;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        form input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 6px;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background: var(--primary-light);
+        }
+
+        /* ================================
+           TABELAS
+        ================================ */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th {
+            background: #f8fafc;
+            color: var(--dark2);
+        }
+
+        /* ================================
+           BADGES
+        ================================ */
+
         .badge {
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 20px;
+            margin-right: 5px;
+            margin-bottom: 5px;
             display: inline-block;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 11px;
-            background: #e5e7eb;
-            margin-right: 3px;
         }
+
+        .badge-blue { background: var(--blue-badge); color: var(--primary-light); }
+        .badge-green { background: var(--green-badge); color: var(--success); }
+        .badge-yellow { background: var(--yellow-badge); color: var(--warning); }
+
+        /* ================================
+           MODAL
+        ================================ */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* ================================
+           HEATMAP
+        ================================ */
+
+        .heatmap-grid {
+            display: grid;
+            grid-template-columns: 150px repeat(3, 1fr);
+            border: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        .heatmap-grid div {
+            padding: 10px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .heat-low { background: #e2e8f0; }
+        .heat-mid { background: #94a3b8; }
+        .heat-high { background: #1e293b; color: white; }
+
+        /* ================================
+           GRAFO DE MENTORIA
+        ================================ */
+
+        #graph-area {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .node {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            position: absolute;
+            background: var(--primary-light);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .node.mentor { background: var(--dark2); }
+        .node.aprendiz { background: var(--gray2); }
+
     </style>
 </head>
 <body>
-<header>
-    <h1>SkillConnect - MVP Web</h1>
-    <nav>
-        <button onclick="mostrarSecao('home')">Início</button>
-        <button onclick="mostrarSecao('novo')">Novo Perfil</button>
-        <button onclick="mostrarSecao('perfis')">Perfis</button>
-        <button onclick="mostrarSecao('mentoria')">Mentoria</button>
-    </nav>
-</header>
 
-<main>
-    <!-- Seção Home -->
-    <section id="home" class="section active">
-        <h2>Visão Geral da Comunidade</h2>
-        <p>
-            Este MVP simula a plataforma <strong>SkillConnect</strong>, que mapeia competências e interesses dos alunos para
-            facilitar a formação de grupos e conexões de mentoria.
-        </p>
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+        <h2>SkillConnect</h2>
+        <button class="sidebar-btn" onclick="mostrar('login')">Login</button>
+        <button class="sidebar-btn" onclick="mostrar('dashboard')">Dashboard</button>
+        <button class="sidebar-btn" onclick="mostrar('cadastro')">Cadastrar Perfil</button>
+        <button class="sidebar-btn" onclick="mostrar('perfis')">Perfis</button>
+        <button class="sidebar-btn" onclick="mostrar('match')">Match</button>
+        <button class="sidebar-btn" onclick="mostrar('heatmap')">Heatmap</button>
+        <button class="sidebar-btn" onclick="mostrar('badges')">Badges</button>
+        <button class="sidebar-btn" onclick="mostrar('professor')">Painel do Professor</button>
+    </aside>
 
-        <div class="cards">
-            <div class="card">
-                <h3>Perfis cadastrados</h3>
-                <p id="total-perfis">0</p>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="content">
+
+        <!-- LOGIN -->
+        <section id="login" class="section active">
+            <h2>Acessar Plataforma</h2>
+            <div class="card" style="max-width:400px;">
+                <label>Email:</label>
+                <input id="loginEmail" type="email">
+
+                <label>Senha:</label>
+                <input id="loginSenha" type="password">
+
+                <button class="btn" onclick="login()">Entrar</button>
+
+                <p style="color:red; margin-top:10px;" id="loginErro"></p>
             </div>
-            <div class="card">
-                <h3>Mentores disponíveis</h3>
-                <p id="total-mentores">0</p>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section">
+            <h2>Dashboard</h2>
+            <div class="grid grid-4">
+                <div class="card">
+                    <h3>Perfis</h3>
+                    <p class="big-number" id="dash-perfis">0</p>
+                </div>
+                <div class="card">
+                    <h3>Mentores</h3>
+                    <p class="big-number" id="dash-mentores">0</p>
+                </div>
+                <div class="card">
+                    <h3>Iniciantes</h3>
+                    <p class="bigânumber" id="dash-iniciantes">0</p>
+                </div>
+                <div class="card">
+                    <h3>Avançados</h3>
+                    <p class="big-number" id="dash-avancados">0</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Alunos iniciantes</h3>
-                <p id="total-iniciantes">0</p>
-            </div>
-            <div class="card">
-                <h3>Alunos avançados</h3>
-                <p id="total-avancados">0</p>
-            </div>
-        </div>
+        </section>
 
-        <p>
-            Use o menu superior para:
-        </p>
-        <ul>
-            <li><strong>Novo Perfil:</strong> cadastrar alunos com competências e interesses.</li>
-            <li><strong>Perfis:</strong> visualizar a base de alunos cadastrados.</li>
-            <li><strong>Mentoria:</strong> ver sugestões de conexão entre mentores e mentees iniciantes.</li>
-        </ul>
-    </section>
+        <!-- CADASTRAR PERFIL -->
+        <section id="cadastro" class="section">
+            <h2>Novo Perfil</h2>
+            <form class="card" style="max-width:650px;" onsubmit="salvarPerfil(event)">
+                
+                <label>Nome</label>
+                <input id="nome" required>
 
-    <!-- Seção Novo Perfil -->
-    <section id="novo" class="section">
-        <h2>Novo Perfil de Aluno</h2>
-        <form class="form" onsubmit="salvarPerfil(event)">
-            <label for="nome">Nome:</label>
-            <input id="nome" name="nome" type="text" required>
+                <label>Email acadêmico</label>
+                <input id="email" type="email" required>
 
-            <label for="email">Email acadêmico:</label>
-            <input id="email" name="email" type="email" required>
+                <label>Nível</label>
+                <select id="nivel">
+                    <option value="iniciante">Iniciante</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                </select>
 
-            <label for="nivel">Nível geral:</label>
-            <select id="nivel" name="nivel" required>
-                <option value="iniciante">Iniciante</option>
-                <option value="intermediario">Intermediário</option>
-                <option value="avancado">Avançado</option>
-            </select>
+                <label>Competências (separadas por vírgula)</label>
+                <textarea id="competencias"></textarea>
 
-            <label for="competencias">Competências (separadas por vírgula):</label>
-            <textarea id="competencias" name="competencias" rows="3" placeholder="Ex: python, django, sql"></textarea>
+                <label>Interesses (separados por vírgula)</label>
+                <textarea id="interesses"></textarea>
 
-            <label for="interesses">Interesses (separados por vírgula):</label>
-            <textarea id="interesses" name="interesses" rows="3" placeholder="Ex: data science, backend, segurança"></textarea>
+                <label><input type="checkbox" id="mentor"> Disponível para mentoria</label>
 
-            <div class="checkbox-row">
-                <input id="mentor" name="mentor" type="checkbox">
-                <label for="mentor">Disponível para atuar como mentor(a)</label>
-            </div>
+                <button class="btn" type="submit">Salvar Perfil</button>
+            </form>
+        </section>
 
-            <button type="submit">Salvar perfil</button>
-        </form>
-    </section>
+        <!-- LISTA DE PERFIS -->
+        <section id="perfis" class="section">
+            <h2>Perfis Cadastrados</h2>
 
-    <!-- Seção Perfis -->
-    <section id="perfis" class="section">
-        <h2>Perfis Cadastrados</h2>
-        <div id="tabela-perfis-vazia">
-            <p>Ainda não há perfis cadastrados.</p>
-        </div>
-        <div id="tabela-perfis-container" style="display:none;">
+            <input placeholder="Buscar por nome ou tecnologia" 
+                   id="buscaPerfis" 
+                   oninput="buscarPerfis()" 
+                   style="padding:10px; width:70%; border:1px solid var(--border); border-radius:6px;">
+            
             <table>
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Email</th>
                         <th>Nível</th>
                         <th>Competências</th>
                         <th>Interesses</th>
-                        <th>Mentor?</th>
+                        <th>Mentor</th>
                     </tr>
                 </thead>
-                <tbody id="tabela-perfis-body">
-                </tbody>
+                <tbody id="corpoPerfis"></tbody>
             </table>
+        </section>
+
+        <!-- MATCH -->
+        <section id="match" class="section">
+            <h2>Match de Mentoria</h2>
+            <p>As sugestões são baseadas em interseções entre interesses de alunos e competências de mentores.</p>
+            
+            <div id="lista-match"></div>
+        </section>
+
+        <!-- HEATMAP -->
+        <section id="heatmap" class="section">
+            <h2>Heatmap de Competências</h2>
+            <p>A intensidade representa a frequência de perfis com determinada tecnologia.</p>
+
+            <div class="heatmap-grid" id="heatmapGrid">
+                <!-- Preenchido pelo JS -->
+            </div>
+        </section>
+
+        <!-- BADGES -->
+        <section id="badges" class="section">
+            <h2>Badges</h2>
+
+            <div class="card" style="max-width:450px;">
+                <p><strong>Badge Iniciante:</strong> <span class="badge badge-blue">Novato</span></p>
+                <p><strong>Badge Mentor:</strong> <span class="badge badge-green">Mentor</span></p>
+                <p><strong>Badge Top Skills:</strong> <span class="badge badge-yellow">Alta Proficiência</span></p>
+            </div>
+        </section>
+
+        <!-- PAINEL DO PROFESSOR -->
+        <section id="professor" class="section">
+            <h2>Painel do Professor</h2>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Distribuição por Nível</h3>
+                    <p id="distNiveis">Nenhum dado</p>
+                </div>
+                <div class="card">
+                    <h3>Total de Tecnologias Únicas</h3>
+                    <p id="totalTecnologias">0</p>
+                </div>
+                <div class="card">
+                    <h3>Mentores Ativos</h3>
+                    <p id="profMentoresAtivos">0</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top:25px;">Grafo de Mentoria</h3>
+            <div id="graph-area"></div>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>Perfil salvo com sucesso</h3>
+            <button class="btn" onclick="fecharModal()">OK</button>
         </div>
-    </section>
-
-    <!-- Seção Mentoria -->
-    <section id="mentoria" class="section">
-        <h2>Sugestões de Mentoria</h2>
-        <p>
-            A lógica abaixo tenta conectar <strong>alunos iniciantes</strong> que não são mentores com
-            <strong>mentores disponíveis</strong>, usando a interseção entre interesses e competências.
-        </p>
-        <ul id="lista-mentorias" class="mentoria-list">
-        </ul>
-        <p id="mentoria-vazia" style="display:none;">
-            Ainda não há combinações de mentoria com base nos perfis cadastrados.
-        </p>
-    </section>
-</main>
-
-<footer>
-    SkillConnect MVP – aplicação web demonstrativa (HTML, CSS e JavaScript).
-</footer>
+    </div>
 
 <script>
-    // Estrutura de dados em memória
-    const perfis = [];
+/* ============================================
+   SISTEMA GLOBAL DE DADOS (LOCALSTORAGE)
+============================================ */
 
-    function normalizarLista(texto) {
-        if (!texto) return [];
-        return texto
-            .split(",")
-            .map(t => t.trim().toLowerCase())
-            .filter(t => t.length > 0);
+let perfis = JSON.parse(localStorage.getItem("perfis_skillconnect")) || [];
+
+/* ============================================
+   NAVEGAÇÃO ENTRE SEÇÕES
+============================================ */
+
+function mostrar(id) {
+    document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+/* ============================================
+   LOGIN FIXO
+============================================ */
+
+function login() {
+    const email = document.getElementById("loginEmail").value;
+    const senha = document.getElementById("loginSenha").value;
+    const erro = document.getElementById("loginErro");
+
+    erro.textContent = "";
+
+    const credenciais = [
+        { email: "aluno@teste.com", senha: "123456", tipo: "aluno" },
+        { email: "prof@teste.com", senha: "123456", tipo: "professor" }
+    ];
+
+    const usuario = credenciais.find(u => u.email === email && u.senha === senha);
+
+    if (!usuario) {
+        erro.textContent = "Credenciais inválidas.";
+        return;
     }
 
-    function atualizarDashboard() {
-        const total = perfis.length;
-        const totalMentores = perfis.filter(p => p.mentor).length;
-        const totalIniciantes = perfis.filter(p => p.nivel === "iniciante").length;
-        const totalAvancados = perfis.filter(p => p.nivel === "avancado").length;
+    localStorage.setItem("usuario_logado_skill", JSON.stringify(usuario));
+    mostrar("dashboard");
+    atualizarDashboard();
+}
 
-        document.getElementById("total-perfis").textContent = total;
-        document.getElementById("total-mentores").textContent = totalMentores;
-        document.getElementById("total-iniciantes").textContent = totalIniciantes;
-        document.getElementById("total-avancados").textContent = totalAvancados;
-    }
+/* ============================================
+   SUPORTE
+============================================ */
 
-    function renderizarPerfis() {
-        const corpoTabela = document.getElementById("tabela-perfis-body");
-        const vazio = document.getElementById("tabela-perfis-vazia");
-        const containerTabela = document.getElementById("tabela-perfis-container");
+function salvarLocal() {
+    localStorage.setItem("perfis_skillconnect", JSON.stringify(perfis));
+}
 
-        corpoTabela.innerHTML = "";
+function normalizarLista(texto) {
+    return texto
+        .split(",")
+        .map(t => t.trim().toLowerCase())
+        .filter(t => t.length > 0);
+}
 
-        if (perfis.length === 0) {
-            vazio.style.display = "block";
-            containerTabela.style.display = "none";
-            return;
-        }
+/* ============================================
+   CADASTRO DE PERFIL
+============================================ */
 
-        vazio.style.display = "none";
-        containerTabela.style.display = "block";
+function salvarPerfil(event) {
+    event.preventDefault();
 
-        perfis.forEach(p => {
-            const tr = document.createElement("tr");
+    const perfil = {
+        nome: document.getElementById("nome").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        nivel: document.getElementById("nivel").value,
+        competencias: normalizarLista(document.getElementById("competencias").value),
+        interesses: normalizarLista(document.getElementById("interesses").value),
+        mentor: document.getElementById("mentor").checked
+    };
 
-            const tdNome = document.createElement("td");
-            tdNome.textContent = p.nome;
+    perfis.push(perfil);
+    salvarLocal();
 
-            const tdEmail = document.createElement("td");
-            tdEmail.textContent = p.email;
+    atualizarDashboard();
+    renderPerfis();
+    gerarMatch();
 
-            const tdNivel = document.createElement("td");
-            tdNivel.textContent = p.nivel;
+    abrirModal();
 
-            const tdComp = document.createElement("td");
-            tdComp.innerHTML = "";
-            p.competencias.forEach(c => {
-                const span = document.createElement("span");
-                span.className = "badge";
-                span.textContent = c;
-                tdComp.appendChild(span);
-            });
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("competencias").value = "";
+    document.getElementById("interesses").value = "";
+    document.getElementById("mentor").checked = false;
+}
 
-            const tdInts = document.createElement("td");
-            tdInts.innerHTML = "";
-            p.interesses.forEach(i => {
-                const span = document.createElement("span");
-                span.className = "badge";
-                span.textContent = i;
-                tdInts.appendChild(span);
-            });
+/* ============================================
+   DASHBOARD
+============================================ */
 
-            const tdMentor = document.createElement("td");
-            tdMentor.textContent = p.mentor ? "Sim" : "Não";
+function atualizarDashboard() {
+    document.getElementById("dash-perfis").textContent = perfis.length;
+    document.getElementById("dash-mentores").textContent = perfis.filter(p => p.mentor).length;
+    document.getElementById("dash-iniciantes").textContent = perfis.filter(p => p.nivel === "iniciante").length;
+    document.getElementById("dash-avancados").textContent = perfis.filter(p => p.nivel === "avancado").length;
+}
 
-            tr.appendChild(tdNome);
-            tr.appendChild(tdEmail);
-            tr.appendChild(tdNivel);
-            tr.appendChild(tdComp);
-            tr.appendChild(tdInts);
-            tr.appendChild(tdMentor);
+/* ============================================
+   LISTAR PERFIS
+============================================ */
 
-            corpoTabela.appendChild(tr);
-        });
-    }
+function renderPerfis(lista = perfis) {
+    const corpo = document.getElementById("corpoPerfis");
+    corpo.innerHTML = "";
 
-    function renderizarMentorias() {
-        const lista = document.getElementById("lista-mentorias");
-        const vazio = document.getElementById("mentoria-vazia");
-        lista.innerHTML = "";
+    lista.forEach(p => {
+        corpo.innerHTML += `
+            <tr>
+                <td>${p.nome}</td>
+                <td>${p.nivel}</td>
+                <td>${p.competencias.map(c => `<span class="badge badge-blue">${c}</span>`).join("")}</td>
+                <td>${p.interesses.map(i => `<span class="badge badge-green">${i}</span>`).join("")}</td>
+                <td>${p.mentor ? "Sim" : "Não"}</td>
+            </tr>
+        `;
+    });
+}
 
-        const mentores = perfis.filter(p => p.mentor);
-        const mentees = perfis.filter(p => !p.mentor && p.nivel === "iniciante");
+/* ============================================
+   BUSCA
+============================================ */
 
-        const matches = [];
+function buscarPerfis() {
+    const termo = document.getElementById("buscaPerfis").value.trim().toLowerCase();
 
-        mentees.forEach(mentee => {
-            mentores.forEach(mentor => {
-                const interseccao = mentor.competencias.filter(c =>
-                    mentee.interesses.includes(c)
-                );
-                if (interseccao.length > 0) {
-                    matches.push({
-                        mentor,
-                        mentee,
-                        tecnologias: interseccao
-                    });
-                }
-            });
-        });
+    const filtrados = perfis.filter(p =>
+        p.nome.toLowerCase().includes(termo) ||
+        p.competencias.some(c => c.includes(termo)) ||
+        p.interesses.some(i => i.includes(termo))
+    );
 
-        if (matches.length === 0) {
-            vazio.style.display = "block";
-            return;
-        } else {
-            vazio.style.display = "none";
-        }
+    renderPerfis(filtrados);
+}
 
-        matches.forEach(m => {
-            const li = document.createElement("li");
-            li.innerHTML = `
-                <strong>Mentor(a):</strong> ${m.mentor.nome} (${m.mentor.email})<br>
-                <strong>Mentee:</strong> ${m.mentee.nome} (${m.mentee.email})<br>
-                <strong>Tecnologias em comum:</strong> ${m.tecnologias.join(", ")}
-            `;
-            lista.appendChild(li);
-        });
-    }
+/* ============================================
+   MATCH DE MENTORIA
+============================================ */
 
-    function salvarPerfil(event) {
-        event.preventDefault();
+function gerarMatch() {
+    const area = document.getElementById("lista-match");
+    area.innerHTML = "";
 
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const nivel = document.getElementById("nivel").value;
-        const competencias = normalizarLista(
-            document.getElementById("competencias").value
-        );
-        const interesses = normalizarLista(
-            document.getElementById("interesses").value
-        );
-        const mentor = document.getElementById("mentor").checked;
+    const mentores = perfis.filter(p => p.mentor);
+    const mentees = perfis.filter(p => !p.mentor && p.nivel === "iniciante");
 
-        if (!nome || !email) {
-            alert("Preencha pelo menos nome e email.");
-            return;
-        }
-
-        perfis.push({ nome, email, nivel, competencias, interesses, mentor });
-
-        // Limpa o formulário
-        document.getElementById("nome").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("nivel").value = "iniciante";
-        document.getElementById("competencias").value = "";
-        document.getElementById("interesses").value = "";
-        document.getElementById("mentor").checked = false;
-
-        atualizarDashboard();
-        renderizarPerfis();
-        renderizarMentorias();
-
-        mostrarSecao("perfis");
-    }
-
-    function mostrarSecao(id) {
-        document.querySelectorAll(".section").forEach(sec => {
-            sec.classList.remove("active");
-        });
-        document.getElementById(id).classList.add("active");
-    }
-
-    // Inicializa com alguns perfis de exemplo para a demonstração
-    function seedExemplo() {
-        perfis.push(
-            {
-                nome: "Ana Silva",
-                email: "ana.silva@unicap.br",
-                nivel: "avancado",
-                competencias: ["python", "django", "sql", "data science"],
-                interesses: ["mentorar", "boas práticas"],
-                mentor: true
-            },
-            {
-                nome: "Bruno Souza",
-                email: "bruno.souza@unicap.br",
-                nivel: "intermediario",
-                competencias: ["java", "git", "sql"],
-                interesses: ["spring", "arquitetura"],
-                mentor: true
-            },
-            {
-                nome: "Carla Lima",
-                email: "carla.lima@unicap.br",
-                nivel: "iniciante",
-                competencias: [],
-                interesses: ["python", "django", "git"],
-                mentor: false
-            },
-            {
-                nome: "Diego Costa",
-                email: "diego.costa@unicap.br",
-                nivel: "iniciante",
-                competencias: ["html", "css"],
-                interesses: ["javascript", "react", "git"],
-                mentor: false
+    mentees.forEach(mentee => {
+        mentores.forEach(mentor => {
+            const inter = mentor.competencias.filter(c => mentee.interesses.includes(c));
+            if (inter.length > 0) {
+                area.innerHTML += `
+                    <div class="card" style="border-left:4px solid var(--primary); margin-bottom:12px;">
+                        <p><strong>Mentor:</strong> ${mentor.nome} (${mentor.email})</p>
+                        <p><strong>Mentee:</strong> ${mentee.nome} (${mentee.email})</p>
+                        <p><strong>Tecnologias em comum:</strong> ${inter.join(", ")}</p>
+                    </div>
+                `;
             }
-        );
+        });
+    });
 
-        atualizarDashboard();
-        renderizarPerfis();
-        renderizarMentorias();
+    if (area.innerHTML === "") {
+        area.innerHTML = "<p>Nenhuma sugestão de mentoria encontrada.</p>";
+    }
+}
+
+/* ============================================
+   MODAL
+============================================ */
+
+function abrirModal() {
+    document.getElementById("modal").style.display = "flex";
+}
+
+function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+/* ============================================
+   INICIALIZAÇÃO
+============================================ */
+
+window.onload = () => {
+    atualizarDashboard();
+    renderPerfis();
+    gerarMatch();
+};
+</script>
+<script>
+/* ============================================
+   HEATMAP DE TECNOLOGIAS
+============================================ */
+
+function gerarHeatmap() {
+    const grid = document.getElementById("heatmapGrid");
+    grid.innerHTML = "";
+
+    // Criar mapa de frequência
+    const freq = {};
+
+    perfis.forEach(p => {
+        p.competencias.forEach(c => {
+            if (!freq[c]) freq[c] = 0;
+            freq[c]++;
+        });
+    });
+
+    const tecnologias = Object.keys(freq);
+
+    if (tecnologias.length === 0) {
+        grid.innerHTML = "<p>Nenhum dado disponível.</p>";
+        return;
     }
 
-    seedExemplo();
+    // Cabeçalho
+    grid.innerHTML += `
+        <div><strong>Tecnologia</strong></div>
+        <div><strong>Baixo</strong></div>
+        <div><strong>Médio</strong></div>
+        <div><strong>Alto</strong></div>
+    `;
+
+    tecnologias.forEach(tec => {
+        const f = freq[tec];
+
+        let low = "", mid = "", high = "";
+
+        if (f <= 1) low = `class="heat-low"`;
+        else if (f === 2) mid = `class="heat-mid"`;
+        else high = `class="heat-high"`;
+
+        grid.innerHTML += `
+            <div>${tec}</div>
+            <div ${low}></div>
+            <div ${mid}></div>
+            <div ${high}></div>
+        `;
+    });
+}
+
+/* ============================================
+   PAINEL DO PROFESSOR - ESTATÍSTICAS
+============================================ */
+
+function atualizarPainelProfessor() {
+    const inic = perfis.filter(p => p.nivel === "iniciante").length;
+    const inter = perfis.filter(p => p.nivel === "intermediario").length;
+    const avan = perfis.filter(p => p.nivel === "avancado").length;
+
+    document.getElementById("distNiveis").textContent =
+        `Iniciantes: ${inic} | Intermediários: ${inter} | Avançados: ${avan}`;
+
+    const techSet = new Set();
+    perfis.forEach(p => p.competencias.forEach(c => techSet.add(c)));
+    document.getElementById("totalTecnologias").textContent = techSet.size;
+
+    document.getElementById("profMentoresAtivos").textContent =
+        perfis.filter(p => p.mentor).length;
+
+    gerarHeatmap();
+    gerarGrafoMentoria();
+}
+
+/* ============================================
+   GRAFO DE MENTORIA
+============================================ */
+
+function gerarGrafoMentoria() {
+    const area = document.getElementById("graph-area");
+    area.innerHTML = "";
+
+    const mentores = perfis.filter(p => p.mentor);
+    const mentees = perfis.filter(p => !p.mentor);
+
+    if (perfis.length === 0) {
+        area.innerHTML = "<p style='padding:20px;'>Nenhum dado disponível.</p>";
+        return;
+    }
+
+    const largura = area.offsetWidth;
+    const altura = area.offsetHeight;
+
+    function criarNo(x, y, texto, classe) {
+        const div = document.createElement("div");
+        div.className = `node ${classe}`;
+        div.style.left = `${x}px`;
+        div.style.top = `${y}px`;
+        div.textContent = texto;
+        area.appendChild(div);
+    }
+
+    mentores.forEach((m, i) => {
+        const x = 40 + i * 80;
+        criarNo(x, 50, m.nome[0].toUpperCase(), "mentor");
+    });
+
+    mentees.forEach((m, i) => {
+        const x = 40 + i * 80;
+        criarNo(x, 220, m.nome[0].toUpperCase(), "aprendiz");
+    });
+}
+
+/* ============================================
+   EXECUTAR AVANÇADO
+============================================ */
+
+function atualizarAvancado() {
+    gerarHeatmap();
+    atualizarPainelProfessor();
+    gerarGrafoMentoria();
+}
+
+/* ============================================
+   INICIALIZAÇÃO COMPLETA
+============================================ */
+
+window.onload = () => {
+    atualizarDashboard();
+    renderPerfis();
+    gerarMatch();
+    atualizarPainelProfessor();
+};
 </script>
 </body>
 </html>
