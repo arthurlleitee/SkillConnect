@@ -1,169 +1,185 @@
-Este documento descreve como contribuir para o desenvolvimento do SkillConnect na versão MVP apresentada nesta entrega. O objetivo é manter o projeto organizado, compreensível e fácil de evoluir em futuras versões.
+# CONTRIBUTING.md – Guia de Contribuição do SkillConnect
 
-Visão Geral do Modelo de Contribuição
+Este documento descreve de forma clara e objetiva como contribuir para o desenvolvimento do **SkillConnect (versão MVP)**, garantindo que o projeto permaneça organizado, compreensível e preparado para evoluções futuras.
 
-O SkillConnect (versão MVP) foi desenvolvido utilizando apenas:
+O objetivo é orientar qualquer colaborador — mesmo sem conhecimento prévio do projeto — a compreender sua estrutura, montar o ambiente e realizar contribuições seguras e consistentes.
 
-HTML
+---
 
-CSS
+## 📌 Visão Geral do Modelo de Contribuição
 
-JavaScript
+O SkillConnect (MVP) foi desenvolvido utilizando exclusivamente tecnologias front-end:
 
-A aplicação é totalmente executada do lado do cliente (client-side), sem backend e sem banco de dados real. Todas as contribuições devem manter esse padrão simples e funcional, para facilitar manutenção e continuidade do projeto.
+* HTML
+* CSS
+* JavaScript
 
-Contribuições podem incluir:
+A aplicação é totalmente executada no lado do cliente (*client-side*), sem backend e sem banco de dados externo. Todas as informações são armazenadas via **LocalStorage**.
 
-Melhorias visuais
+As contribuições devem respeitar essa arquitetura simples, visando facilitar manutenção, compreensão e continuidade do projeto.
 
-Ajustes na lógica JavaScript
+---
 
-Adição de novas funcionalidades da plataforma original
+## ✅ Tipos de Contribuição Aceitos
 
-Organização ou refatoração do código
+As contribuições podem incluir, mas não se limitam a:
 
-Comentários e documentação adicional
+* Melhorias visuais e de usabilidade
+* Ajustes na lógica JavaScript
+* Correções de bugs
+* Novas funcionalidades previstas no escopo original
+* Organização ou refatoração do código
+* Comentários técnicos e documentação adicional
 
-Estrutura Atual do Projeto
-index.html         # Arquivo principal contendo HTML, CSS e JavaScript
+---
 
+## 📁 Estrutura Atual do Projeto
 
-Todo o MVP está centralizado em um único arquivo, com:
+Atualmente, o MVP está centralizado em um único arquivo:
 
-HTML: estrutura das páginas
+```
+index.html   # Contém HTML, CSS e JavaScript do sistema
+```
 
-CSS: estilização embutida no <style>
+Componentes internos:
 
-JavaScript: lógica da aplicação (armazenamento, cadastro, mentoria)
+* **HTML** – Estrutura das telas e seções
+* **CSS** – Estilização embutida na tag `<style>`
+* **JavaScript** – Lógica da aplicação (armazenamento, cadastro, mentoria, dashboard)
 
-Contribuições futuras poderão separar essas partes se necessário, mas para esta versão recomenda-se manter tudo unificado.
+Embora futuras versões possam separar os arquivos, nesta entrega recomenda-se manter essa organização unificada.
 
-Como Contribuir
-1. Organização do Código
+---
 
-As contribuições devem:
+##  Como Contribuir
 
-Preservar a lógica atual
+### 1. Organização do Código
 
-Evitar duplicação de funções
+Todas as contribuições devem:
 
-Comentar trechos complexos
+* Preservar a lógica existente
+* Evitar duplicação de funções
+* Utilizar nomes de variáveis claros e descritivos
+* Manter indentação e organização consistentes
+* Comentar trechos complexos ou críticos
+* Testar manualmente após cada alteração
 
-Testar manualmente no navegador após alterações
+---
 
-2. Adição de Novos Perfis ou Ajustes de Interface
+### 2. Melhorias de Interface e Experiência do Usuário
 
-Melhorias no formulário, visualização de listas ou no layout das seções são bem-vindas.
-Mudanças visuais devem manter o estilo simples e coerente do MVP.
+São bem-vindas contribuições que envolvam:
 
-3. Extensão da Lógica de Mentoria
+* Ajustes no formulário de cadastro
+* Melhoria na visualização de listas
+* Organização das seções
+* Correções visuais
 
-A lógica atual utiliza interseção entre:
+As alterações devem preservar o estilo simples e funcional do MVP, priorizando legibilidade e clareza.
 
-interesses do mentee
+---
 
-competências do mentor
+### 3. Extensão da Lógica de Mentoria
 
-Para calcular compatibilidade.
+A lógica atual de match baseia-se na interseção entre:
 
-Contribuições podem incluir:
+* Interesses do aprendiz (mentee)
+* Competências do mentor
 
-Pesos por nível (iniciante, intermediário, avançado)
+Possíveis melhorias incluem:
 
-Pontuações adicionais
+* Aplicação de pesos por nível (iniciante, intermediário, avançado)
+* Sistema de pontuação por compatibilidade
+* Filtros por prioridades de tecnologia
+* Novas regras de recomendação
 
-Filtragem de tecnologias mais relevantes
+Toda nova regra implementada deve ser claramente comentada no código e descrita neste documento.
 
-Novas regras devem ser documentadas claramente dentro do arquivo.
+---
 
-4. Adição de Novas Funcionalidades
+### 4. Adição de Novas Funcionalidades
 
-A plataforma original prevê recursos adicionais, como:
+A plataforma prevê futuras expansões, como:
 
-Formação automática de grupos
+* Formação automática de grupos
+* Heatmap de competências
+* Ranking ou gamificação
+* Visualização em grafo
 
-Heatmap de competências
+Qualquer implementação deve manter a simplicidade e evitar aumentar o escopo além do viável dentro do conceito de MVP.
 
-Ranking ou gamificação
+---
 
-Visualização em grafo
+## 🔍 Garantia de Integridade
 
-Qualquer implementação deve manter a simplicidade e evitar aumentar o escopo além do viável dentro de um único arquivo.
+Toda alteração deve ser testada manualmente, validando:
 
-5. Garantir Integridade da Interface
+* Navegação entre seções
+* Cadastro de novos perfis
+* Atualização da lista de perfis
+* Geração de match de mentoria
+* Atualização do dashboard
+* Funcionamento do LocalStorage
 
-Toda mudança deve ser testada manualmente para verificar:
+---
 
-Navegação entre seções
+## 📝 Documentação das Alterações
 
-Criação de novos perfis
+Sempre que realizar modificações relevantes, atualize este documento informando:
 
-Atualização da lista de perfis
+* O que foi alterado
+* Por que foi alterado
+* Como testar a modificação
 
-Atualização da lista de mentorias
+Inclua também, se necessário:
 
-Atualização do dashboard
+* Novas funções adicionadas
+* Novas seções ou módulos
+* Mudanças na lógica de mentoria
+* Ajustes significativos de layout
 
-6. Documentação das Alterações
+---
 
-Cada contribuinte deve atualizar este documento quando adicionar:
+## 🔄 Fluxo de Trabalho Sugerido
 
-Novas funções
+1. Realizar backup do arquivo `index.html`
+2. Implementar alterações de forma incremental
+3. Testar localmente no navegador
+4. Validar todas as funcionalidades afetadas
+5. Atualizar README e CONTRIBUTING se necessário
+6. Realizar commit com mensagem clara
 
-Novos módulos ou seções
+---
 
-Alterações significativas de layout
+##  Boas Práticas
 
-Mudanças na lógica de mentoria
+* Manter o código limpo e legível
+* Evitar complexidade desnecessária
+* Utilizar padrões consistentes
+* Seguir princípios de responsabilidade única
+* Documentar lógica de match ao ser expandida
+* Priorizar simplicidade e estabilidade
 
-Descrever brevemente:
+---
 
-O que foi alterado
-
-Por que foi alterado
-
-Como testar a nova funcionalidade
-
-Fluxo de Trabalho Sugerido
-
-Duplicar o arquivo index.html para backup.
-
-Realizar alterações incrementalmente.
-
-Testar o arquivo localmente abrindo no navegador.
-
-Validar se todas as seções funcionam após mudanças.
-
-Atualizar README e CONTRIBUTING conforme necessário.
-
-Boas Práticas
-
-Manter o código organizado e com identação consistente.
-
-Utilizar nomes de variáveis claros e descritivos.
-
-Separar responsabilidades quando possível (HTML, CSS e JS bem delimitados).
-
-Documentar a lógica de match de mentoria caso seja expandida.
-
-Manter a simplicidade e a integridade do MVP.
-
-Futuras Versões do Projeto
+##  Planejamento para Versões Futuras
 
 As próximas etapas previstas incluem:
 
-Migração para uma arquitetura completa com backend
+* Migração para arquitetura com backend
+* Uso de Python (Django/Flask) ou Node.js
+* Banco de dados real
+* Deploy em nuvem (Azure)
+* API de recomendação avançada
+* Dashboard interativo com gráficos
+* Sistema de autenticação completo
 
-Uso de Python (Django ou Flask) ou Node.js
+As contribuições devem respeitar o estágio atual do projeto, mas podem estruturar o código de forma a facilitar essa futura evolução.
 
-Banco de dados real
+---
 
-Deploy na nuvem (Azure)
+## 📢 Considerações Finais
 
-API de recomendação mais robusta
+Este guia garante que o SkillConnect permaneça padronizado, sustentável e fácil de evoluir, permitindo que qualquer colaborador compreenda rapidamente sua estrutura e contribua com segurança.
 
-Dashboard interativo com gráficos
-
-Autenticação de usuários
-
-Contribuições devem respeitar o estágio atual, mas já podem preparar a base para evoluções futuras.
+A colaboração consciente é fundamental para a qualidade e longevidade do projeto.
