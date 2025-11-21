@@ -62,19 +62,6 @@ Usuário Professor:
 
 ---
 
-## 📸 Demonstração
-
-*(Adicione aqui as capturas de tela do sistema após fazer upload das imagens no repositório)*
-
-Exemplo:
-
-```markdown
-![Dashboard](screenshot-dashboard.png)
-![Match](screenshot-match.png)
-![Heatmap](screenshot-heatmap.png)
-```
-
----
 
 ## 🧪 Relato Detalhado sobre Programação em Par
 
