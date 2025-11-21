@@ -15,7 +15,7 @@ Todas as informações são armazenadas localmente via LocalStorage, garantindo 
 ## 🎯 Funcionalidades
 
 *  Sistema de Login Simples (Aluno / Professor)
-*  Cadastro de perfis com:
+* ✅ Cadastro de perfis com:
 
   * Nome
   * Email acadêmico
@@ -23,6 +23,7 @@ Todas as informações são armazenadas localmente via LocalStorage, garantindo 
   * Competências técnicas
   * Interesses de aprendizagem
   * Disponibilidade para mentoria
+   
 *  Dashboard com métricas em tempo real
 *  Sistema de Match de Mentoria automático
 *  Busca inteligente de perfis
