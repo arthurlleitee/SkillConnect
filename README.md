@@ -1,192 +1,186 @@
-Sobre o Projeto
+# SkillConnect MVP 🚀
 
-O SkillConnect é uma plataforma colaborativa projetada para mapear, visualizar e conectar competências técnicas e interesses de aprendizado dos alunos de uma instituição de ensino. O objetivo é reduzir barreiras de comunicação e criar um ecossistema acadêmico mais colaborativo, onde cada estudante tenha visibilidade sobre o capital intelectual da comunidade.
+Plataforma educacional desenvolvida para conectar alunos e mentores com base em suas competências técnicas e interesses acadêmicos, promovendo aprendizagem colaborativa, troca de conhecimento e desenvolvimento de habilidades.
 
-O sistema facilita a formação de grupos de estudo, a conexão entre mentores e aprendizes e a identificação de lacunas de conhecimento dentro de uma turma. Professores também podem utilizar essas informações para planejar atividades pedagógicas mais direcionadas.
+---
 
-Conceito Central
+## 📌 Visão Geral
 
-A plataforma se baseia na ideia de que os alunos podem declarar:
+O SkillConnect é um MVP (Minimum Viable Product) que simula um ambiente acadêmico onde estudantes podem cadastrar seus perfis, indicar competências e interesses, e encontrar possíveis mentores automaticamente com base em tecnologias em comum.
 
-Suas competências técnicas e respectivos níveis de proficiência (iniciante, intermediário, avançado)
+Todas as informações são armazenadas localmente via LocalStorage, garantindo persistência simples sem uso de backend.
 
-Suas áreas de interesse e aprendizado
+---
 
-Sua disponibilidade para atuar como mentor
+## 🎯 Funcionalidades
 
-Com essas informações, o sistema é capaz de gerar:
+* ✅ Sistema de Login Simples (Aluno / Professor)
+* ✅ Cadastro de perfis com:
 
-Mapa visual de competências
+  * Nome
+  * Email acadêmico
+  * Nível (Iniciante, Intermediário, Avançado)
+  * Competências técnicas
+  * Interesses de aprendizagem
+  * Disponibilidade para mentoria
+* ✅ Dashboard com métricas em tempo real
+* ✅ Sistema de Match de Mentoria automático
+* ✅ Busca inteligente de perfis
+* ✅ Heatmap de tecnologias
+* ✅ Painel exclusivo do professor
+* ✅ Sistema de Badges visuais
+* ✅ Grafo de visualização de mentoria
 
-Sugestões de grupos equilibrados para projetos
+---
 
-Conexões entre mentores e aprendizes
+## 🧠 Tecnologias Utilizadas
 
-Relatórios sobre pontos fortes da comunidade acadêmica
+* HTML5
+* CSS3
+* JavaScript (Vanilla)
+* LocalStorage para persistência de dados
 
-Funcionalidades Principais
-Perfil de Usuário
+---
 
-Cadastro de nome, e-mail acadêmico e nível.
+## ▶️ Como executar o projeto
 
-Registro de competências e interesses separados por vírgula.
+1. Baixe todos os arquivos do repositório
+2. Abra o arquivo `index.html` em qualquer navegador moderno
+3. O sistema estará pronto para uso
 
-Indicação opcional de disponibilidade para mentoria.
+### Credenciais de teste
 
-Mapa de Competências
+Usuário Aluno:
 
-Representação da distribuição de habilidades (na versão completa).
+* Email: [aluno@teste.com](mailto:aluno@teste.com)
+* Senha: 123456
 
-Identificação de tecnologias mais populares.
+Usuário Professor:
 
-Motor de Sugestão de Grupos (versão completa)
+* Email: [prof@teste.com](mailto:prof@teste.com)
+* Senha: 123456
 
-Formação de grupos balanceados considerando níveis e habilidades.
+---
 
-Indicação de participantes ideais para atividades específicas.
+## 📸 Demonstração
 
-Sistema de Mentoria
+*(Adicione aqui as capturas de tela do sistema após fazer upload das imagens no repositório)*
 
-Combinação entre mentees iniciantes e mentores disponíveis.
+Exemplo:
 
-Lógica baseada na interseção entre interesses e competências.
+```markdown
+![Dashboard](screenshot-dashboard.png)
+![Match](screenshot-match.png)
+![Heatmap](screenshot-heatmap.png)
+```
 
-Exibição clara das tecnologias que tornam o match relevante.
+---
 
-Gamificação (versão futura)
+## 🧪 Relato Detalhado sobre Programação em Par
 
-Pontuação por contribuir ensinando ou aprendendo.
+### Contexto da experimentação
 
-Conquistas temáticas e participação em ranking colaborativo.
+Durante o desenvolvimento do SkillConnect, decidimos testar a prática de **programação em par** como parte do processo metodológico do projeto, com o objetivo de avaliar seus impactos na qualidade do código, na organização da solução e na tomada de decisões técnicas.
 
-Integrações Futuras
+A prática foi realizada de forma estruturada em momentos específicos do desenvolvimento, especialmente nas etapas iniciais e em trechos considerados críticos para a base do sistema.
 
-GitHub para exibir projetos reais no perfil.
+---
 
-LinkedIn para exportação de competências.
+### Metodologia aplicada
 
-Sistema de notificações personalizadas.
+Adotamos o modelo clássico **Driver/Navigator**, com alternância de papéis ao longo das sessões:
 
-Versão Utilizada no MVP
+* **Driver**:
 
-Para esta entrega, foi desenvolvida uma versão mínima funcional da plataforma, implementada inteiramente com:
+  * Responsável por escrever o código
+  * Manipular a IDE e executar testes
+  * Implementar a lógica definida em conjunto
 
-HTML
+* **Navigator**:
 
-CSS
+  * Observava e analisava o código em tempo real
+  * Sugeriu melhorias de organização
+  * Identificou inconsistências e possíveis falhas
+  * Planejou próximos passos
 
-JavaScript
+As sessões ocorreram principalmente por reunião online, compartilhamento de tela e revisão simultânea do código-fonte.
 
-Essa abordagem permitiu uma demonstração clara, rápida e funcional da ideia central, mantendo as principais interações e permitindo visualizar o conceito de forma navegável.
+---
 
-O MVP implementa:
+### Atividades realizadas em programação em par
 
-Cadastro de perfis
+A programação em par foi aplicada especificamente nas seguintes etapas:
 
-Armazenamento em memória
+* Planejamento da estrutura geral do sistema
+* Criação da navegação entre seções
+* Definição do modelo de dados dos perfis
+* Implementação das funções:
 
-Exibição da base de perfis
+  * `salvarPerfil()`
+  * `atualizarDashboard()`
+  * `gerarMatch()`
+* Estruturação inicial do Dashboard
+* Organização das seções HTML
+* Definição das regras de mentoria
 
-Dashboard de indicadores
+Durante essas sessões, foi possível:
 
-Sistema de mentoria
+* Evitar duplicidade de código
+* Refinar a lógica antes da implementação
+* Garantir maior consistência nas validações
 
-Exibição de tecnologias em comum entre mentor e mentee
+---
 
-Perfis de exemplo pré-carregados para facilitar a demonstração
+### Por que a prática não foi contínua
 
-Esse MVP é totalmente client-side e pode ser executado simplesmente abrindo o arquivo HTML em qualquer navegador moderno. Dessa forma, atende ao objetivo principal da entrega: demonstrar a aplicação central do SkillConnect.
+Após as sessões iniciais, optamos por não manter a programação em par de forma permanente durante todo o desenvolvimento, pelos seguintes motivos técnicos e organizacionais:
 
-Como Executar o MVP
+1. **Diferença de disponibilidade entre integrantes**
+   Conciliar horários para todas as tarefas impactaria negativamente o cronograma.
 
-Baixe ou copie o arquivo index.html para seu computador.
+2. **Natureza do MVP**
+   O projeto possui estrutura relativamente simples, permitindo que etapas operacionais fossem realizadas individualmente com eficiência.
 
-Abra o arquivo no navegador (Google Chrome, Firefox, Edge ou outro).
+3. **Otimização da produtividade**
+   A divisão de responsabilidades mostrou-se mais eficaz:
 
-Utilize o menu superior para navegar pelas seções:
+   * Um integrante focado em interface e layout
+   * Outro em lógica e armazenamento de dados
 
-Início
+Ainda assim, trechos importantes passaram por validação conjunta e revisão cruzada.
 
-Novo Perfil
+---
 
-Perfis
+### Evidências da experimentação
 
-Mentoria
+A adoção de programação em par contribuiu diretamente para:
 
-Não é necessário instalar bibliotecas, configurar servidor ou utilizar backend.
+* Clareza na modelagem de dados
+* Melhoria na legibilidade do código
+* Redução de erros nas funções principais
+* Decisões mais assertivas na estrutura do projeto
 
-Seções do MVP
-Início
+Esse processo foi essencial principalmente na fase inicial de concepção técnica.
 
-Apresenta indicadores gerais:
+---
 
-Total de perfis
+### Lições aprendidas
 
-Total de mentores
+* A programação em par mostrou-se extremamente eficaz em fases de estruturação e planejamento.
+* Em tarefas repetitivas ou de refinamento visual, o trabalho individual com revisão posterior foi mais produtivo.
+* Em projetos futuros, utilizaríamos essa técnica em momentos estratégicos, como:
 
-Número de iniciantes
+  * Definição de arquitetura
+  * Resolução de bugs complexos
+  * Implementação de funcionalidades críticas
 
-Número de avançados
+---
 
-Novo Perfil
+## 📋 Considerações Finais
 
-Formulário para criar novos registros. Campos:
+A metodologia utilizada no SkillConnect demonstra não apenas foco na implementação técnica, mas também na organização e na qualidade do processo de desenvolvimento. A experimentação de programação em par reforça o compromisso com boas práticas e aprendizado aplicado.
 
-Nome
+Este README foi estruturado de forma a documentar não apenas o código, mas também as decisões e práticas adotadas durante o projeto.
 
-E-mail
+---
 
-Nível
-
-Competências
-
-Interesses
-
-Disponibilidade como mentor
-
-Perfis
-
-Listagem completa com:
-
-Competências em forma de badges
-
-Interesses segmentados
-
-Indicação de disponibilidade para mentoria
-
-Mentoria
-
-Apresenta sugestões de:
-
-Mentor
-
-Mentee
-
-Tecnologias em comum
-
-A lógica utiliza interseção entre interesses e competências para gerar recomendações consistentes.
-
-Justificativa Técnica da Solução
-
-Dado o curto prazo e a necessidade de entregar um protótipo funcional demonstrável, optou-se pela implementação de um MVP utilizando HTML, CSS e JavaScript. Isso permite apresentar ao professor:
-
-Fluxos completos de uso
-
-Interface navegável
-
-Lógica funcional de recomendação
-
-Fidelidade conceitual ao projeto original
-
-A arquitetura simplificada garante execução imediata, sem dependências externas, facilitando a apresentação e evitando problemas de infraestrutura ou deploy.
-
-Sobre o Uso de Programação em Par
-
-Durante o desenvolvimento do projeto, não foi adotada a prática de programação em par. A decisão ocorreu devido à diferença de níveis técnicos dentro da equipe, o que poderia prejudicar o ritmo de produção e dificultar a contribuição individual de cada membro. A opção escolhida permitiu que todos colaborassem de maneira autônoma e eficiente dentro do prazo disponível.
-
-
-### Diagrama de Atividades do Sistema
-
-Aqui está o fluxo de atividades para o matchmaking de mentoria em nossa plataforma SkillConnect.
-
-![Diagrama que mostra o fluxo de atividades para encontrar um mentor](https://github.com/arthurlleitee/SkillConnect/blob/main/Sem%20t%C3%ADtulo%20(1).jpg?raw=true)
