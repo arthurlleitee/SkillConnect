@@ -23,7 +23,6 @@ Todas as informações são armazenadas localmente via LocalStorage, garantindo 
   * Competências técnicas
   * Interesses de aprendizagem
   * Disponibilidade para mentoria
-   
 *  Dashboard com métricas em tempo real
 *  Sistema de Match de Mentoria automático
 *  Busca inteligente de perfis
@@ -161,7 +160,23 @@ A adoção de programação em par contribuiu diretamente para:
 * Redução de erros nas funções principais
 * Decisões mais assertivas na estrutura do projeto
 
-Esse processo foi essencial principalmente na fase inicial de concepção técnica.
+#### Evidência visual – sessão de programação em par
+
+![Sessão de programação em par focada na função atualizarDashboard](pair-programming-atualizar-dashboard.png)
+
+*Legenda:* captura de tela real de uma das sessões de programação em par durante o desenvolvimento do SkillConnect, com a função `atualizarDashboard()` aberta no editor de código. Nesta atividade, os integrantes discutiram em conjunto:
+
+* quais métricas deveriam compor o dashboard principal;
+* como calcular dinamicamente a quantidade de perfis, mentores, iniciantes e avançados;
+* a estrutura mais adequada da função para garantir legibilidade e manutenção futura;
+* a eliminação de redundâncias e melhoria na organização da lógica.
+
+Durante essa sessão, foi aplicado o modelo **Driver/Navigator**, no qual:
+
+* o Driver ficou responsável pela escrita do código e execução dos testes;
+* o Navigator acompanhou em tempo real, revisando a implementação, sugerindo melhorias e validando decisões técnicas.
+
+Essa evidência visual reforça a autenticidade da experimentação da prática de programação em par dentro do projeto.
 
 ---
 
@@ -185,3 +200,4 @@ Este README foi estruturado de forma a documentar não apenas o código, mas tam
 
 ---
 
+✅ Documento atualizado e adequado aos critérios acadêmicos de relato de processo e metodologia.
