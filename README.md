@@ -187,4 +187,3 @@ Este README foi estruturado de forma a documentar não apenas o código, mas tam
 
 ---
 
-✅ Documento atualizado e adequado aos critérios acadêmicos de relato de processo e metodologia.
