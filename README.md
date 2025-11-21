@@ -62,6 +62,15 @@ Usuário Professor:
 
 ---
 
+## 📸 Demonstração
+
+As capturas de tela abaixo ilustram as principais funcionalidades do sistema SkillConnect em funcionamento.
+
+![Sessão de programação em par focada na função atualizarDashboard](pair-programming-atualizar-dashboard.png)
+
+*(Outras telas do sistema podem ser adicionadas aqui futuramente, como Dashboard, Match de Mentoria e Heatmap de Competências.)*
+
+---
 
 ## 🧪 Relato Detalhado sobre Programação em Par
 
@@ -186,4 +195,3 @@ A metodologia utilizada no SkillConnect demonstra não apenas foco na implementa
 Este README foi estruturado de forma a documentar não apenas o código, mas também as decisões e práticas adotadas durante o projeto.
 
 ---
-
